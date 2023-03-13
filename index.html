@@ -8,13 +8,47 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
-    <title>Weather Dashboard</title>
+    <title>Weather</title>
   </head>
 
   <body>
-    <header>
 
+    <header class="container-fluid text-center text-white bg-primary p-2">
+      <h1>Weather Dashboard</h1>
     </header>
+
+    <div class="container-fluid d-flex flex-row">
+      <div id="search" class="container col-md-3 col-sm-6 d-flex flex-column">
+          <form class="form-group align mp-3">
+              <label for="citySearch">Search for a City:</label>
+              <input type="text" class="form-control" id="citySearch" placeholder="Enter a City">
+              <button type="submit" id="searchBtn" class="btn btn-dark mt-2">Search</button>
+          </form>
+          <div id="recent" class="btn-group d-flex flex-column" role="group">
+          </div>
+      </div>
+
+      <div class="container col-md-8 col-sm-6 mw-70">
+
+        <header id="currentDay" class="row container-fluid d-flex flex-column"></header>
+
+        <section class="row">
+            5-Day Forecast
+        </section>
+
+        <section id="forecast" class="row container-fluid d-flex flex-wrap">
+            <div id="dayOne" class="card col-lg col-md-4 col-sm-12 d-flex flex-column m-1"></div>
+            <div id="dayTwo" class="card col-lg col-md-4 col-sm-12 d-flex flex-column m-1"></div>
+            <div id="dayThree" class="card col-lg col-md-4 col-sm-12 d-flex flex-column m-1"></div>
+            <div id="dayFour" class="card col-lg col-md-4 col-sm-12 d-flex flex-column m-1"></div>
+            <div id="dayFive" class="card col-lg col-md-4 col-sm-12 d-flex flex-column m-1"></div>
+        </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
