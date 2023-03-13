@@ -76,7 +76,7 @@ function renderCurrent(city, data) {
 }
 
 function renderForecast(data) {
-    
+  // was supposed to do for loop for appending the info for 5 day forecast but ran out of time
 }
 
 function renderSearchHistory() {
